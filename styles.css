@@ -33,9 +33,6 @@
         var(--mainGradientLeftColor),
         var(--mainGradientRightColor)
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    display: flex;
-    flex-direction: column;
 }
 
 /* Header */
@@ -124,16 +121,6 @@
     }
 }
 
-/* @media screen and (m-width: 1600px) {
-    .hero__heading {
-        font-size: 200px;
-    }
-
-    .hero__main_description {
-        font-size: 120px;
-    }
-} */
-
 .hero__button {
     font-size: 1.8rem;
     background: #00f260; /* fallback for old browsers */
@@ -154,7 +141,7 @@
     border-radius: 25px;
 
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 10rem;
 
     cursor: pointer;
     position: relative;
@@ -186,6 +173,46 @@
     left: 0;
     right: 0;
     width: 100%;
+}
+
+.wave {
+    position: static;
+    bottom: 0;
+    left: 0;
+    margin-top: -185px;
+    width: 100%;
+    overflow: hidden;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 180px;
+}
+
+.wave .shape-fill {
+    fill: rgb(255, 241, 210);
+}
+
+/* Cards Section */
+.cards {
+    background: rgb(255, 241, 210);
+}
+
+.cards__container {
+    padding: 10rem 10rem 10rem 10rem;
+
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    gap: 1rem;
+}
+
+.card {
+    background-color: #ffae00;
+    border: #f25900 solid 3px;
+    padding: 1rem;
 }
 
 /* Footer Section */
