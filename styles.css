@@ -123,7 +123,7 @@
 
 .hero__button {
     font-size: 1.8rem;
-    background: #00f260; /* fallback for old browsers */
+    background: #b91d73; /* fallback for old browsers */
     background: -webkit-linear-gradient(
         to right,
         #f953c6,
@@ -204,15 +204,84 @@
 .cards__container {
     padding: 10rem 10rem 10rem 10rem;
 
-    display: grid;
-    grid-template-columns: 1.5fr 2fr 1.5fr;
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+
+    justify-content: center;
 }
 
 .card {
-    background-color: #ffae00;
-    border: #f25900 solid 3px;
-    padding: 1rem;
+    position: relative;
+
+    /* background-color: #ffae00; */
+    background: #ff5f6d; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #fcde9f,
+        #ffba5f
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #fcde9f,
+        #ffba5f
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 0.5rem;
+}
+
+.img_description {
+    /* TODO: FIX CENTER POSITION */
+    position: absolute;
+    bottom: 17%;
+
+    text-align: center;
+
+    z-index: 1;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.card:hover .img_description {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card:after {
+    position: absolute;
+    content: "";
+
+    background: rgb(255, 236, 198);
+    bottom: 5%;
+    left: 50%;
+    right: 50%;
+    width: 0;
+    height: 30%;
+    border-radius: 25px;
+
+    transition: all 0.3s;
+
+    cursor: pointer;
+}
+
+.card:hover:after {
+    /* visibility: visible; */
+    /* opacity: 1; */
+    left: 5%;
+    right: 5%;
+    width: 90%;
+}
+
+#bruh {
+    width: 100px;
+}
+
+#bruh2 {
+    width: 300px;
 }
 
 /* Footer Section */
