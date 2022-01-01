@@ -10,6 +10,9 @@
 
     --mainGradientLeftColor: #f37335;
     --mainGradientRightColor: #fdc830;
+
+    --regularVisibility: visible;
+    --animeVisibility: hidden;
 }
 
 .animemode {
@@ -17,6 +20,9 @@
 
     --mainGradientLeftColor: #8e2de2;
     --mainGradientRightColor: #4a00e0;
+
+    --regularVisibility: hidden;
+    --animeVisibility: visible;
 }
 
 /* Hero Section */
@@ -33,6 +39,23 @@
         var(--mainGradientLeftColor),
         var(--mainGradientRightColor)
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#workingboy {
+    visibility: var(--regularVisibility);
+    position: absolute;
+    width: 300px;
+    rotate: 10deg;
+    left: 70%;
+    top: 15%;
+}
+
+#starplatinum {
+    visibility: var(--animeVisibility);
+    position: absolute;
+    width: 225px;
+    left: 70%;
+    top: 15%;
 }
 
 /* Header */
