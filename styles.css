@@ -148,7 +148,7 @@
         #b91d73
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    padding: 20px 60px;
+    padding: 20px 60px; 
 
     border: none;
     border-radius: 25px;
@@ -159,6 +159,8 @@
 
     cursor: pointer;
     position: relative;
+
+    z-index: 1;
 }
 
 .hero__button a {
