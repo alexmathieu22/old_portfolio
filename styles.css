@@ -149,7 +149,7 @@
         #b91d73
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    padding: 20px 60px; 
+    padding: 20px 60px;
 
     border: none;
     border-radius: 25px;
@@ -200,6 +200,8 @@
     width: 100%;
     overflow: hidden;
     transform: rotate(180deg);
+
+    /* padding-bottom: 3rem; */
 }
 
 .wave svg {
@@ -215,22 +217,43 @@
 
 /* Cards Section */
 
-.cards__heading {
-    color: #17141d;
-    font-size: 5vw;
-    margin-left: 10%;
-    padding-top: 3rem;
-
-    /* so it doesnt move the cards */
-    margin-bottom: -6rem;
-}
-
 .cards {
-
     background: rgb(255, 241, 210);
 
     /*fix little white line appearing between svg and background here on firefox when zooming in or out*/
     margin-top: -2px;
+}
+
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(-5deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+.cards__heading {
+    font-family: "Licorice", cursive;
+
+    color: #17141d;
+    font-size: 5vw;
+    margin-left: 10%;
+
+    /* so it doesnt move the cards */
+    margin-bottom: -8rem;
+
+    /* to make sure rotation is made from the middle */
+    width: fit-content;
+
+    /* custom made animation */
+    -webkit-animation: rotating 1s linear infinite;
 }
 
 .cards__container {
@@ -331,26 +354,11 @@
     width: 90%;
 }
 
-@-webkit-keyframes rotating {
-    from{
-        -webkit-transform: rotate(0deg);
-    }
-    25%{
-        -webkit-transform: rotate(-5deg);
-    }
-    75%{
-        -webkit-transform: rotate(5deg);
-    }
-    to{
-        -webkit-transform: rotate(0deg);
-    }
-}
-
 .card:hover {
     /* TODO INFINITE ROTATE OR SCALE? */
     /* transform: translateY(-20px); */
     /* -webkit-animation: rotating 1s linear infinite; */
-    transform: scale(1.10);
+    transform: scale(1.1);
     transition: 0.4s ease-out;
 }
 
@@ -410,6 +418,75 @@
     max-height: 100%;
 }
 
+.wave_bottom {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave_bottom svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 115px;
+}
+
+.wave_bottom .shape-fill {
+    fill: rgb(255, 241, 210);
+}
+
+/* Past working experiences */
+.pastworks {
+    background: #232526; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #232526,
+        #414345
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #232526,
+        #414345
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@-webkit-keyframes updown {
+    from {
+        -webkit-transform: translateY(0);
+    }
+    25% {
+        -webkit-transform: translateY(-5%);
+    }
+    75% {
+        -webkit-transform: translateY(5%);
+    }
+    to {
+        -webkit-transform: translateY(0);
+    }
+}
+
+.pastworks__heading {
+    font-family: "Licorice", cursive;
+
+    color: rgb(255, 241, 210);
+    font-size: 5vw;
+    margin-left: 10%;
+
+    /* so it is not too close to the top */
+    margin-top: 3rem;
+
+    width: fit-content;
+
+    /* custom made animation */
+    -webkit-animation: updown 1s linear infinite;
+
+    /* so it doesnt move the cards */
+    /* margin-bottom: -8rem; */
+}
+
 /* Footer Section */
 
 .footer__container {
@@ -438,6 +515,7 @@
     transition: 0.3 ease-out;
 }
 
+/* Reactivity // Mobile */
 @media screen and (max-width: 768px) {
     .hero__heading {
         font-size: 80px;
@@ -448,6 +526,10 @@
     }
 
     .cards__heading {
+        font-size: 10vw;
+    }
+
+    .pastworks__heading {
         font-size: 10vw;
     }
 
