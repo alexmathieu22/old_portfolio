@@ -342,8 +342,7 @@
 /* TODO MODIFY THESE */
 
 #glootdo {
-    background-image: url("/images/glootdo.png");
-    background-size: 350px 490px;
+    border-radius: 10%;
     width: 350px;
     height: 490px;
 }
@@ -373,7 +372,7 @@
 }
 
 #bruh2 {
-    width: 300px;
+    width: 500px;
 }
 
 /* Footer Section */
@@ -422,6 +421,6 @@
 
         align-items: center;
 
-        gap: 1rem;
+        gap: 2rem;
     }
 }
