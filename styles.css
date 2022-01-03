@@ -485,27 +485,23 @@
 
     /* custom made animation */
     -webkit-animation: updown 3s linear infinite;
-
-    /* so it doesnt move the cards */
-    /* margin-bottom: -8rem; */
 }
 
 .job__container {
-    margin-top: 2rem;
-    margin-left: 8%;
+    margin: 2rem auto;
 
     width: fit-content;
 }
 
 .jobtitle__container {
-    width: max-content;
+    max-width: 35rem;
     padding: 1rem;
     border: 3px solid rgb(255, 241, 210);
-    border-radius: 20%;
+    border-radius: 5%;
 }
 
 .pastworks__main_title {
-    font-size: 3vw;
+    font-size: 4rem;
     background: #fdc830; /* fallback for old browsers */
     background: -webkit-linear-gradient(
         to right,
@@ -526,7 +522,7 @@
 
 .pastworks__main_description {
     color: rgb(255, 241, 210);
-    font-size: 2.5vw;
+    font-size: 3rem;
     margin-left: 10%;
 }
 
@@ -561,12 +557,9 @@
     color: rgb(255, 241, 210);
 
     width: 40vw;
-
-    /* font-size: 2vw; */
 }
 
 #ulaval {
-    /* height: 40vw; */
     width: 40vw;
 
     background-color: rgb(255, 241, 210);
@@ -673,5 +666,34 @@
 
     #ulaval {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    .job__container {
+        border: 3px solid hotpink;
+        margin: 0;
+        width: 100%;
+    }
+
+    .jobtitle__container {
+        margin-left: 25%;
+        margin-bottom: 2rem;
+    }
+
+    .jobdescription__container {
+        max-width: 40vw;
+        margin: 0 auto;
+    }
+
+    .jobdescription__text {
+        width: 16vw;
+        padding: 2rem 0;
+    }
+
+    #ulaval {
+        width: 16vw;
+        /* justify-content: right; */
+        /* align-items: flex-end; */
     }
 }
