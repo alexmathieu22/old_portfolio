@@ -480,6 +480,7 @@
 
     /* so it is not too close to the top */
     margin-top: 3rem;
+    margin-bottom: 2rem;
 
     width: fit-content;
 
@@ -640,8 +641,6 @@
 
         align-items: center;
         justify-content: center;
-
-        border: 3px solid hotpink;
     }
 
     .jobdescription__container {
@@ -671,7 +670,6 @@
 
 @media screen and (min-width: 2500px) {
     .job__container {
-        border: 3px solid hotpink;
         margin: 0;
         width: 100%;
     }
