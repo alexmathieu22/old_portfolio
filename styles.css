@@ -200,8 +200,6 @@
     width: 100%;
     overflow: hidden;
     transform: rotate(180deg);
-
-    /* padding-bottom: 3rem; */
 }
 
 .wave svg {
@@ -253,7 +251,9 @@
     width: fit-content;
 
     /* custom made animation */
-    -webkit-animation: rotating 1s linear infinite;
+    -webkit-animation: rotating 3s linear infinite;
+
+    padding-top: 2%;
 }
 
 .cards__container {
@@ -451,6 +451,9 @@
         #232526,
         #414345
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* leaving some space after everything */
+    padding-bottom: 8%;
 }
 
 @-webkit-keyframes updown {
@@ -481,10 +484,95 @@
     width: fit-content;
 
     /* custom made animation */
-    -webkit-animation: updown 1s linear infinite;
+    -webkit-animation: updown 3s linear infinite;
 
     /* so it doesnt move the cards */
     /* margin-bottom: -8rem; */
+}
+
+.job__container {
+    margin-top: 2rem;
+    margin-left: 8%;
+
+    width: fit-content;
+}
+
+.jobtitle__container {
+    width: max-content;
+    padding: 1rem;
+    border: 3px solid rgb(255, 241, 210);
+    border-radius: 20%;
+}
+
+.pastworks__main_title {
+    font-size: 3vw;
+    background: #fdc830; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        var(--mainGradientLeftColor),
+        var(--mainGradientRightColor)
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        var(--mainGradientLeftColor),
+        var(--mainGradientRightColor)
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.pastworks__main_description {
+    color: rgb(255, 241, 210);
+    font-size: 2.5vw;
+    margin-left: 10%;
+}
+
+.jobdescription__container {
+    margin-top: 2rem;
+    margin-left: 1rem;
+
+    background-color: #131313;
+    border-radius: 5vw;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    max-width: 90vw;
+
+    gap: 2vw;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.jobdescription__text {
+    /* TODO CHECK THIS */
+
+    margin-left: 5vw;
+
+    font-size: 2rem;
+
+    text-align: justify;
+
+    color: rgb(255, 241, 210);
+
+    width: 40vw;
+
+    /* font-size: 2vw; */
+}
+
+#ulaval {
+    /* height: 40vw; */
+    width: 40vw;
+
+    background-color: rgb(255, 241, 210);
+    padding: 2%;
+
+    border-radius: 5vw;
 }
 
 /* Footer Section */
@@ -502,6 +590,10 @@
     gap: 1rem;
 
     list-style: none;
+}
+
+.footer__container ul img {
+    height: 30px;
 }
 
 .footer__container ul a {
@@ -543,5 +635,27 @@
         align-items: center;
 
         gap: 2rem;
+    }
+
+    .jobdescription__container {
+        margin-top: 2rem;
+
+        background-color: #131313;
+        border-radius: 5vw;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        max-width: 90vw;
+
+        gap: 2vw;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    #ulaval {
+        width: 80vw;
     }
 }
