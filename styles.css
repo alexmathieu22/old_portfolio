@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,7 +22,7 @@
 .animemode {
     --photoIcon: url("./images/jojo.png");
 
-    --mainGradientLeftColor: #8e2de2;
+    --mainGradientLeftColor: #6f1cb8;
     --mainGradientRightColor: #4a00e0;
 
     --regularVisibility: hidden;
@@ -65,8 +69,28 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    height: 34px;
+    height: fit-content;
     width: 100%;
+}
+
+.header__container ul {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: calc(50% - 500px);
+
+    color: #fff;
+}
+
+.header__link {
+    text-decoration: none;
+    color: #fff;
 }
 
 .animemode-toggle {
@@ -80,9 +104,6 @@
     border-width: 2px;
     border-style: solid;
     border-color: #fff;
-
-    margin-top: 10px;
-    margin-right: 10px;
 
     cursor: pointer;
 }
@@ -115,6 +136,8 @@
 
     /* border */
     border: 10px solid #ffff;
+
+    box-shadow: -0.1rem 0 3rem #000;
 }
 
 .hero__heading {
@@ -571,23 +594,45 @@
 
 /* Footer Section */
 
+.contact {
+    color: #fff;
+    margin-top: 3px;
+    font-size: 25px;
+}
+
 .footer__container {
     background-color: #131313;
 
     padding: 4rem 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
 }
 
 .footer__container ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     gap: 1rem;
 
     list-style: none;
+
+    width: fit-content;
 }
 
 .footer__container ul img {
     height: 30px;
+    opacity: 0.7;
+
+    transition: 0.3s;
+}
+
+.footer__container ul img:hover {
+    transform: translateY(-2px);
+    opacity: 1;
 }
 
 .footer__container ul a {
