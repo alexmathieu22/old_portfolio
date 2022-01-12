@@ -442,10 +442,23 @@ html {
     transition: opacity 0.3s ease;
 }
 
+/* To show panels and remove cards when they are clicked */
+
 .cards_description__container.show {
     opacity: 1;
 
     pointer-events: auto;
+}
+
+.card.hidden{
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+#projects.hidden {
+    transition: opacity 0.3s ease;
+    opacity: 0;
 }
 
 .project_descriptions {
