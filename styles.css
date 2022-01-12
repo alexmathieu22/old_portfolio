@@ -215,6 +215,7 @@ html {
     width: 100%;
 }
 
+/* Wave top */
 .wave {
     position: static;
     bottom: 0;
@@ -239,10 +240,14 @@ html {
 /* Cards Section */
 
 .cards {
+    position: relative;
     background: rgb(255, 241, 210);
 
     /*fix little white line appearing between svg and background here on firefox when zooming in or out*/
     margin-top: -2px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 @-webkit-keyframes rotating {
@@ -280,6 +285,8 @@ html {
 }
 
 .cards__container {
+    position: relative;
+
     padding: 10rem 10rem 10rem 10rem;
 
     display: flex;
@@ -302,9 +309,6 @@ html {
 
     display: flex;
 
-    /* width: fit-content;
-    height: fit-content; */
-
     max-width: 80vw; /* Making sure images dont overflow when shrinking browser.*/
 
     border-radius: 10%;
@@ -312,6 +316,8 @@ html {
     justify-content: center;
 
     transition: 0.4s ease-out; /* for hover*/
+
+    cursor: pointer;
 }
 
 .project_name {
@@ -326,8 +332,6 @@ html {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
-
-    cursor: pointer;
 }
 
 .project_language {
@@ -341,8 +345,6 @@ html {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
-
-    cursor: pointer;
 }
 
 .card:hover .project_name {
@@ -367,8 +369,6 @@ html {
     border-radius: 25px;
 
     transition: all 0.3s;
-
-    cursor: pointer;
 }
 
 .card:hover:after {
@@ -378,9 +378,6 @@ html {
 }
 
 .card:hover {
-    /* TODO INFINITE ROTATE OR SCALE? */
-    /* transform: translateY(-20px); */
-    /* -webkit-animation: rotating 1s linear infinite; */
     transform: scale(1.1);
     transition: 0.4s ease-out;
 }
@@ -421,26 +418,76 @@ html {
     color: rgb(255, 241, 210);
 }
 
-/* TODO MAKE MORE PROJECTS :P */
+.cards_description__container {
+    position: absolute;
+    background-color: #131313;
+    top: 10%;
+    height: 80%;
+    width: 1500px;
+    padding: 100px 0;
+    border-radius: 10rem;
+    align-self: center;
+    border-radius: 8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 90vw;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    color: rgb(255, 241, 210);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
 
-#bruh {
+.cards_description__container.show {
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+.project_descriptions {
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    font-size: 2rem;
+
+    text-align: justify;
+
+    color: rgb(255, 241, 210);
+
+    width: 800px;
+}
+
+.exit {
+    position: absolute;
+    top: 4%;
+    right: 10%;
+    height: 50px;
+
+    opacity: 0.8;
+
+    transition: opacity 0.3s ease;
+}
+
+.exit:hover {
+    cursor: pointer;
+
+    opacity: 1;
+}
+
+.img_desc {
+    margin-left: 2rem;
     border-radius: 10%;
-    width: 250px;
+    width: 300px;
     height: auto;
 
     max-width: 100%;
-    max-height: 100%;
 }
 
-#bruh2 {
-    border-radius: 10%;
-    width: 500px;
-    height: auto;
-
-    max-width: 100%;
-    max-height: 100%;
-}
-
+/* BOTTOM WAVE */
 .wave_bottom {
     position: static;
     top: 0;
@@ -710,6 +757,14 @@ html {
 
     #ulaval {
         width: 100%;
+    }
+
+    .cards_description__container {
+        top: 15%;
+        height: 70%;
+    }
+    .project_descriptions {
+        font-size: 1.5rem;
     }
 }
 
