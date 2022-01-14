@@ -24,8 +24,8 @@ function removeCards() {
     var cards = document.getElementsByClassName("card");
     len = cards !== null ? cards.length : 0;
     i = 0;
-    for(i; i < len; i++) {
-        cards[i].classList.add("hidden"); 
+    for (i; i < len; i++) {
+        cards[i].classList.add("hidden");
     }
     console.log("test");
 }
@@ -34,11 +34,10 @@ function addCards() {
     var cards = document.getElementsByClassName("card");
     len = cards !== null ? cards.length : 0;
     i = 0;
-    for(i; i < len; i++) {
-        cards[i].classList.remove("hidden"); 
+    for (i; i < len; i++) {
+        cards[i].classList.remove("hidden");
     }
 }
-
 
 // Show/remove glootdo panel
 glootdocard.addEventListener("click", () => {
