@@ -1,13 +1,13 @@
-const quoridorcard = document.getElementById("quoridorcard");
+const coveocard = document.getElementById("coveocard");
 const glootdocard = document.getElementById("glootdocard");
 const websitecard = document.getElementById("websitecard");
 
 const glootdo_desc_card = document.getElementById("glootdo_desc_card");
-const quoridor_desc_card = document.getElementById("quoridor_desc_card");
+const coveo_desc_card = document.getElementById("coveo_desc_card");
 const website_desc_card = document.getElementById("website_desc_card");
 
 const exit_glootdo = document.getElementById("exit-glootdo");
-const exit_quoridor = document.getElementById("exit-quoridor");
+const exit_coveo = document.getElementById("exit-coveo");
 const exit_website = document.getElementById("exit-website");
 
 function removeTitle() {
@@ -52,15 +52,15 @@ exit_glootdo.addEventListener("click", () => {
     addTitle();
 });
 
-// Show/remove quoridor panel
-quoridorcard.addEventListener("click", () => {
-    quoridor_desc_card.classList.add("show");
+// Show/remove coveo panel
+coveocard.addEventListener("click", () => {
+    coveo_desc_card.classList.add("show");
     removeCards();
     removeTitle();
 });
 
-exit_quoridor.addEventListener("click", () => {
-    quoridor_desc_card.classList.remove("show");
+exit_coveo.addEventListener("click", () => {
+    coveo_desc_card.classList.remove("show");
     addCards();
     addTitle();
 });

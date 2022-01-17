@@ -409,7 +409,7 @@ nav ul {
     max-width: 100%;
 }
 
-#quoridor {
+#coveo {
     border-radius: 10%;
     width: 300px;
     height: auto;
@@ -422,7 +422,7 @@ nav ul {
     width: 300px;
     height: auto;
 
-    /* padding just to have the same size as the quoridor card */
+    /* padding just to have the same size as the coveo card */
     padding-top: 20%;
     padding-bottom: 20%;
 
@@ -440,8 +440,8 @@ nav ul {
 .cards_description__container {
     position: absolute;
     background-color: #131313;
-    top: 10%;
-    height: 80%;
+    top: 2.5%;
+    height: 95%;
     width: 1500px;
     padding: 100px 0;
     border-radius: 10rem;
@@ -490,7 +490,7 @@ nav ul {
 
     color: rgb(255, 241, 210);
 
-    width: 800px;
+    width: 1000px;
 }
 
 .exit {
