@@ -728,7 +728,7 @@ nav ul {
 }
 
 /* Reactivity // Mobile */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
     .hero__heading {
         font-size: 80px;
     }
