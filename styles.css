@@ -80,6 +80,8 @@ nav ul {
 
 .nav__link:hover {
     color: #131313;
+
+    transition: all 0.3s ease;
 }
 
 .animemode-toggle {
